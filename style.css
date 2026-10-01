@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #d6e4f0;
+}
+
+header {
+    background-color: #2d6a9f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.formulario-seccion {
+    background-color: white;
+    padding: 20px;
+    border: 3px solid #2d6a9f;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+input,
+select {
+    padding: 8px;
+}
+
+button {
+    background-color: #f0a500;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d88c00;
+}
+
+.equipos-seccion {
+    margin-top: 30px;
+}
+
+#buscarEquipo {
+    width: 50%;
+    margin-bottom: 15px;
+}
+
+#filtroEstado {
+    margin-left: 10px;
+}
+
+
+/* CONTADORES */
+
+.contadores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.contadores div {
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #2d6a9f;
+}
+
+.contadores h3 {
+    font-size: 25px;
+    margin: 5px;
+}
+
+
+/* BOTONES DE ARCHIVOS */
+
+.botones-archivos {
+    margin: 20px 0;
+}
+
+.boton-importar {
+    display: inline-block;
+    background-color: #f0a500;
+    padding: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#importarJSON {
+    display: none;
+}
+
+
+/* TARJETAS */
+
+#contenedor-equipos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tarjeta-equipo {
+    background-color: white;
+    border-top: 8px solid #2d6a9f;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 5px 5px 0px #8ca6bb;
+}
+
+.tarjeta-equipo h3 {
+    color: #2d6a9f;
+}
+
+.tarjeta-equipo p {
+    font-size: 15px;
+}
+
+.tarjeta-equipo button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.estado {
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 40px;
+    background-color: #2d6a9f;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}

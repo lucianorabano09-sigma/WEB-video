@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gestión de Equipos Informáticos</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Gestión de Equipos Informáticos</h1>
+        <p>Registro y administración de computadoras</p>
+    </header>
+
+    <main>
+
+        <!-- FORMULARIO -->
+
+        <section class="formulario-seccion">
+
+            <h2>Agregar equipo</h2>
+
+            <form id="formulario-equipo">
+
+                <label>Tipo de computadora</label>
+
+                <select id="tipo">
+                    <option value="">Seleccionar tipo</option>
+                    <option value="Notebook">Notebook</option>
+                    <option value="PC de Escritorio">PC de Escritorio</option>
+                    <option value="All-in-One">All-in-One</option>
+                    <option value="Servidor">Servidor</option>
+                </select>
+
+                <label>Nombre del titular</label>
+                <input type="text" id="titular">
+
+                <label>Marca</label>
+                <input type="text" id="marca">
+
+                <label>Modelo</label>
+                <input type="text" id="modelo">
+
+                <label>Procesador</label>
+                <input type="text" id="procesador">
+
+                <label>Memoria RAM</label>
+                <input type="text" id="ram">
+
+                <label>Almacenamiento</label>
+                <input type="text" id="almacenamiento">
+
+                <label>Placa de video</label>
+                <input type="text" id="placaVideo">
+
+                <label>Pulgadas de pantalla</label>
+                <input type="number" id="pulgadas" step="0.1" min="0">
+
+                <!-- Nuevo campo del ampliatorio -->
+                <label>Estado</label>
+
+                <select id="estado">
+                    <option value="Operativo">Operativo</option>
+                    <option value="En reparación">En reparación</option>
+                    <option value="Descartado">Descartado</option>
+                </select>
+
+                <button type="submit" id="botonEnviar">
+                    Agregar Equipo
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- BUSQUEDA Y FILTROS -->
+
+        <section class="equipos-seccion">
+
+            <h2>Buscar equipos</h2>
+
+            <input
+                type="text"
+                id="buscarEquipo"
+                placeholder="Buscar por titular o marca"
+            >
+
+            <label>Filtrar por estado</label>
+
+            <select id="filtroEstado">
+                <option value="Todos">Todos</option>
+                <option value="Operativo">Operativo</option>
+                <option value="En reparación">En reparación</option>
+                <option value="Descartado">Descartado</option>
+            </select>
+
+            <!-- CONTADORES -->
+
+            <div class="contadores">
+
+                <div>
+                    <h3 id="contadorTotal">0</h3>
+                    <p>Total</p>
+                </div>
+
+                <div>
+                    <h3 id="contadorOperativos">0</h3>
+                    <p>Operativos</p>
+                </div>
+
+                <div>
+                    <h3 id="contadorReparacion">0</h3>
+                    <p>En reparación</p>
+                </div>
+
+                <div>
+                    <h3 id="contadorDescartados">0</h3>
+                    <p>Descartados</p>
+                </div>
+
+            </div>
+
+            <!-- IMPORTAR Y EXPORTAR -->
+
+            <div class="botones-archivos">
+
+                <button id="botonExportar">
+                    Exportar JSON
+                </button>
+
+                <label for="importarJSON" class="boton-importar">
+                    Importar JSON
+                </label>
+
+                <input
+                    type="file"
+                    id="importarJSON"
+                    accept=".json"
+                >
+
+            </div>
+
+            <h2>Lista de equipos</h2>
+
+            <div id="contenedor-equipos"></div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Trabajo Práctico - Sistema de Gestión de Equipos Informáticos</p>
+    </footer>
+
+    <script src="js/java.js"></script>
+
+</body>
+</html>
